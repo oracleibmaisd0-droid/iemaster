@@ -316,20 +316,39 @@ ESTADO
 
 #estado {
 
-    min-height:
-        18px;
+    min-height: 18px;
+    margin-top: 7px;
+    font-size: 11px;
+    text-align: center;
 
-    margin-top:
-        7px;
+    color: #777;
 
-    font-size:
-        11px;
+}
 
-    color:
-        #777;
 
-    text-align:
-        center;
+/* CALCULANDO */
+
+#estado.calculando {
+
+    color: blue;
+
+}
+
+
+/* CÁLCULO FINALIZADO */
+
+#estado.exito {
+
+    color: green;
+
+}
+
+
+/* ERROR */
+
+#estado.error-estado {
+
+    color: red;
 
 }
 
@@ -2667,6 +2686,8 @@ async function actualizarCirculo() {
 
     estado.textContent =
         "Calculando…";
+        estado.className =
+    "calculando";
 
 
     try {
@@ -2849,6 +2870,8 @@ async function actualizarCirculo() {
 
         estado.textContent =
             "Cálculo finalizado";
+            estado.className =
+    "exito";
 
 
     }
@@ -2878,6 +2901,8 @@ async function actualizarCirculo() {
 
         estado.textContent =
             "No se pudo realizar el cálculo";
+            estado.className =
+    "error-estado";
 
     }
 
