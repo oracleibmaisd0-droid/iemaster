@@ -2997,5 +2997,14 @@ circulo.style.backgroundColor =
     src="https://cdn.jsdelivr.net/npm/glassy-liquid@0.1/dist/glassy-liquid.min.js">
 </script>
 
+<script>
+const movimientoReducido = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (movimientoReducido.matches) { 
+    alert("Es posible que las animaciones de tu sistema operativo est\u00E9n desactivadas.\n\nEsto puede impedir que algunos efectos de movimiento, elasticidad y deformaci\u00F3n funcionen correctamente.\n\n" +
+        "Activa las animaciones del sistema para intentar efectuar todas las animaciones de la web.");
+}
+</script>
+
 </body>
 </html>
